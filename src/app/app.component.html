@@ -1,33 +1,40 @@
-<nav class="navbar navbar-expand-sm bg-success navbar-dark">
-  <a href="navbar-brand" href="#">
-    HIMS Application
-  </a>
-  <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#mynav" >
-    <span class="navbar-toggle-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="mynav">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="dashboard">Dashboard</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="about">About</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="search"><i class="fa fa-search"></i></span>
-        </div>
-        <input type="text" class="form-control" placeholder="Search" />
-      </div>
-      <button class="btn btn-warning my2- my-sm-0" >Search</button>
-    </form>
-  </div>
-</nav>
-<div class="container-fluid">
-  <router-outlet></router-outlet>
+<div class="wrapper">
+  <form action="" id="wizard" role="application" class="wizard clearfix">
+    <div class="steps clearfix">
+      <ul role="tablist">
+        <li role="tab" aria-disabled="false" class="first done" aria-selected="false">
+          <a id="wizard-t-0"  routerLink="personal" routerLinkActive="active" aria-controls="wizard-p-0">
+            <span class="number">1.</span> <img src="/assets/images/step-1.png" alt=""> <span class="step-order">Personal Detail</span>
+          </a>
+          <img src="/assets/images/step-arrow.png" alt="" class="step-arrow">
+        </li>
+        <li role="tab" aria-disabled="false" class="done" aria-selected="false">
+          <a id="wizard-t-1" routerLink="contact" aria-controls="wizard-p-1">
+            <span class="number">2.</span> <img src="/assets/images/step-2.png" alt=""><span class="step-order">Contact Detail</span>
+          </a>
+          <img src="/assets/images/step-arrow.png" alt="" class="step-arrow">
+        </li>
+        <li role="tab" aria-disabled="false" class="done" aria-selected="false">
+          <a id="wizard-t-2" routerLink="skills" routerLinkActive="active" aria-controls="wizard-p-2">
+            <span class="number">3.</span> <img src="/assets/images/step-3.png" alt=""><span class="step-order">Skills</span>
+          </a>
+          <img src="/assets/images/step-arrow.png" alt="" class="step-arrow">
+        </li>
+        <li role="tab" aria-disabled="false" class="last done" aria-selected="true">
+          <a id="wizard-t-3" routerLink="wexp" routerLinkActive="active" aria-controls="wizard-p-3">
+            <span class="number">4.</span> <img src="/assets/images/step-4.png" alt=""><span class="step-order">Word Experience</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="content clearfix">
+      <section>
+        <router-outlet></router-outlet>
+      </section>
+    </div>
+  </form>
 </div>
+
 
 
 
